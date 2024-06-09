@@ -1,0 +1,25 @@
+.button {
+  margin: 12px;
+  padding: 15px 25px;
+  color: #fff;
+  background: linear-gradient(45deg, #6a5acd, #00bfff);
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: linear-gradient(45deg, #00bfff, #6a5acd);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+.button:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
