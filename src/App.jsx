@@ -47,7 +47,10 @@ function App() {
     <>
       <Description />
 
-      <Options onUpdateFeedback={updateFeedback} />
+      <Options
+        onUpdateFeedback={updateFeedback}
+        showResetButton={totalFeedback > 0}
+      />
 
       {!isActive && <Notification />}
 

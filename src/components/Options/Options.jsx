@@ -1,12 +1,9 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
+
 import css from "./Options.module.css";
 
-const Options = ({ onUpdateFeedback }) => {
-  const [feedbackType, setFeedbackType] = useState("");
-
+const Options = ({ onUpdateFeedback, showResetButton }) => {
   const handleUpdateFeedback = (type) => {
-    setFeedbackType(type);
     onUpdateFeedback(type);
   };
 
@@ -33,7 +30,7 @@ const Options = ({ onUpdateFeedback }) => {
         Bad
       </button>
 
-      {feedbackType !== "" && (
+      {showResetButton && (
         <button className={css.button} onClick={() => handleUpdateFeedback("")}>
           Reset
         </button>
@@ -43,6 +40,7 @@ const Options = ({ onUpdateFeedback }) => {
 };
 
 Options.propTypes = {
+  showResetButton: PropTypes.bool.isRequired,
   onUpdateFeedback: PropTypes.func.isRequired,
 };
 
